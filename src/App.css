@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+html,
+body,
+#app,
+#app > div {
+  height: 100%;
+  position: relative;
+  background-color: rgb(71, 192, 152);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.background {
+  height: 100%;
+}
+
 .App-logo {
   height: 40vmin;
 }
@@ -20,3 +37,33 @@
 .App-link {
   color: #09d3ac;
 }
+
+h1{
+  margin: auto;
+}
+
+
+.btn-dark {
+  margin: 10px;
+}
+
+.form-background{
+  background-image: url("https://www.couriersdoncaster.net/wp-content/uploads/2014/08/new-Fotolia_53639999_Subscription_Monthly_XXL.jpg");
+}
+
+.account{
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: darkgreen;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+}
+
+
+
+@import "~bootstrap/dist/css/bootstrap.css";
