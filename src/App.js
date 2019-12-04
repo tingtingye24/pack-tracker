@@ -7,7 +7,7 @@ import Main from './component/Main'
 import TrackingContainer from "./container/TrackingContainer";
 import Login from "./component/Login";
 import Signup from './component/Signup'
-require('dotenv').config()
+
 
 class App extends Component {
   
@@ -17,7 +17,7 @@ class App extends Component {
   // hello 
   componentDidMount() {
     if (localStorage.token) {
-      fetch(`http://localhost:3000/users/${localStorage.token}`)
+      fetch(REACT_API_BASE+`users/${localStorage.token}`)
         .then(resp => resp.json())
         .then(data =>
           this.setState({
@@ -44,7 +44,7 @@ class App extends Component {
   
 
   render() {
-  
+    require('dotenv').config()
     return (
       <div> 
         <Navigation username={this.state.user.username}/>

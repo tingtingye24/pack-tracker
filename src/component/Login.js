@@ -4,7 +4,7 @@ import { Form, Button, Card } from "react-bootstrap";
 export default class Login extends Component {
   state = {
     username: "",
-    password: "", 
+    password: "",
     errors: []
   };
 
@@ -16,8 +16,8 @@ export default class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(REACT_APP_API_BASE)
-    fetch(REACT_APP_API_BASE+ 'login', {
+
+    fetch( REACT_API_BASE + "users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export default class Login extends Component {
       .then(resp => resp.json())
       .then(data => {
         localStorage.token = data.id;
-        this.props.setUser(data); 
+        this.props.setUser(data);
       })
       .catch(error => alert("Invalid Login.  Please try Again!"));
   };
@@ -42,11 +42,8 @@ export default class Login extends Component {
   render() {
     return (
       <div>
-        <Card
-          className="account"
-
-        >
-            <h1>Log In</h1>
+        <Card className="account">
+          <h1>Log In</h1>
           <Form onSubmit={this.handleSubmit}>
             <Form.Group>
               <Form.Label style={{ margin: "10px" }}>Username</Form.Label>
