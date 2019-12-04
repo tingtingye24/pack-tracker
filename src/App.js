@@ -7,8 +7,10 @@ import Main from './component/Main'
 import TrackingContainer from "./container/TrackingContainer";
 import Login from "./component/Login";
 import Signup from './component/Signup'
+require('dotenv').config()
 
 class App extends Component {
+  
   state = {
     user: ""
   };

@@ -53,8 +53,8 @@ export default class Signup extends Component {
               <Form.Label style={{ margin: "10px" }}>Username</Form.Label>
               <Form.Control
                 onChange={this.handleChange}
-                name="username"
-                placeholder="username"
+                name="Username"
+                placeholder="Username"
                 value={this.state.username}
               />
             </Form.Group>
@@ -63,7 +63,7 @@ export default class Signup extends Component {
               <Form.Label style={{ margin: "10px" }}>Password</Form.Label>
               <Form.Control
                 onChange={this.handleChange}
-                type="password"
+                type="Password"
                 name="password_digest"
                 value={this.state.password_digest}
                 placeholder="Password"

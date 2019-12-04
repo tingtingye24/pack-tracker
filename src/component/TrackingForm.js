@@ -36,7 +36,7 @@ export default class TrackingForm extends Component {
       body: JSON.stringify({
         name: this.state.packageName,
         carrier_id: this.state.carrier,
-        user_id: this.props.user.id,
+        user_id: localStorage.token,
         tracking_number: this.state.trackingNumber
       })
     })

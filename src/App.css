@@ -8,11 +8,10 @@ body,
 #app > div {
   height: 100%;
   position: relative;
-  background-color: rgb(71, 192, 152);
+  background-color: rgb(123, 218, 184);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .background {
@@ -38,32 +37,94 @@ body,
   color: #09d3ac;
 }
 
-h1{
+h1 {
   margin: auto;
 }
-
 
 .btn-dark {
   margin: 10px;
 }
 
-.form-background{
+.form-background {
   background-image: url("https://www.couriersdoncaster.net/wp-content/uploads/2014/08/new-Fotolia_53639999_Subscription_Monthly_XXL.jpg");
 }
 
-.account{
-    border-width: 5px;
-    border-radius: 10px;
-    border-color: darkgreen;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
+.main {
+  height: 1100px;
+  width: 100%;
+  background: url("https://www.incimages.com/uploaded_files/image/970x450/parcels-packages-shipping_1940x900_33939.jpg")
+    no-repeat;
+  background-size: cover;
 }
 
+.mainTitle {
+  background-color: rgba(217, 235, 227, 0.5);
+  position: absolute;
+  text-align: center;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
+h1 {
+  font-family: "Cinzel", serif;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.account {
+  /* border-width: 5px; */
+  border-radius: 10px;
+  background-color: rgb(217, 235, 227);
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+}
+
+.row {
+  background-color: rgb(217, 235, 227);
+  border-width: 10px;
+  border-radius: 5px;
+  width: 62.5%;
+
+  margin: 10px auto;
+}
+
+.trackingCard {
+  border-width: 2px;
+  border-color: lightgray;
+  margin: 30px;
+  width: 80%;
+  height: 90%;
+}
+
+.card-header {
+  text-align: center;
+  text-justify: auto;
+  padding: 0;
+}
+
+.list-group-item {
+  margin: 10px;
+}
+
+.modal-body {
+  /* background-color: rgba(217, 235, 227); */
+  background-color: rgb(120, 212, 180, 0.5);
+}
 
 @import "~bootstrap/dist/css/bootstrap.css";

@@ -52,7 +52,7 @@ export default class Login extends Component {
               <Form.Control
                 onChange={this.handleChange}
                 name="username"
-                placeholder="username"
+                placeholder="Username"
                 value={this.state.username}
               />
             </Form.Group>

@@ -40,9 +40,9 @@ export default class TrackingContainer extends Component {
         />
       ));
     } else if (localStorage.token) {
-      return "Please Wait....."
+      return (<h1>Please Wait.....</h1>);
     } else {
-      return "Login In!!!";
+      return (<h1>Log In Please</h1>);
     }
   }
 
@@ -62,20 +62,12 @@ export default class TrackingContainer extends Component {
     return (
       <div>
         <TrackingForm user={this.props.user} addTracking={this.addTracking} />
-          <Row 
-            style={{
-              margin: "50px",
-              padding: "10px",
-              // justifyContent: "space-between"
-              position: "center",
-              backgroundColor: "aliceblue"
-            }}
-          >
+          <Row>
             {this.renderTrackings()}
           </Row>
 
           <Modal show={!localStorage.token} size='lg' centered>
-          
+  
           <Login setUser={this.props.setUser} signup={true}></Login>
         </Modal>
       </div>
