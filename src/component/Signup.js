@@ -46,14 +46,14 @@ export default class Signup extends Component {
     return (
       <div>
         <Card className="account">
-          <h1>Sign In</h1>
+          <h1>Sign Up</h1>
           {this.renderErrors()}
           <Form onSubmit={this.handleSubmit}>
             <Form.Group>
               <Form.Label style={{ margin: "10px" }}>Username</Form.Label>
               <Form.Control
                 onChange={this.handleChange}
-                name="Username"
+                name="username"
                 placeholder="Username"
                 value={this.state.username}
               />
