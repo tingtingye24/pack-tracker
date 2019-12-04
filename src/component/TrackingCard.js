@@ -45,7 +45,7 @@ export default class TrackingCard extends Component {
             </Button>
           </Card.Header>
           <Card.Img src={logo} style={{ width: "100%", height: "150px", borderWidth: "5px", borderColor: "red" }} />
-          <p>---------------------------------------------------</p>
+
           <Card.Body style={{padding: 0, margin: "10px"}}>
             <Card.Title>{name}</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">

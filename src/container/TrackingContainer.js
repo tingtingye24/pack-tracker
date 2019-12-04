@@ -6,7 +6,7 @@ import Login from "../component/Login";
 
 export default class TrackingContainer extends Component {
   state = {
-    trackings: [],
+    trackings: null,
     finished: false,
     user: null
   };
@@ -31,7 +31,7 @@ export default class TrackingContainer extends Component {
   };
 
   renderTrackings() {
-    if (this.state.trackings.length > 0) {
+    if (this.state.trackings && this.state.trackings.length > 0) {
       return this.state.trackings.map(tracking => (
         <TrackingCard
           key={tracking.id}
@@ -39,8 +39,10 @@ export default class TrackingContainer extends Component {
           removeTracking={this.removeTracking}
         />
       ));
-    } else if (localStorage.token) {
+    } else if (localStorage.token && !this.state.trackings) {
       return (<h1>Please Wait.....</h1>);
+    }else if(!!this.state.trackings){
+      return(<h1>You Currently don't have any tracking.</h1>)
     } else {
       return (<h1>Log In Please</h1>);
     }

@@ -44,12 +44,14 @@ export default class TrackingForm extends Component {
       .then(data => {
           this.setState({
             packageName: "",
-            trackingNumber: "",
-            carrier: ""
+            trackingNumber: ""
           })
         return this.props.addTracking(data);
       })
-      .catch(err => alert("You must sign in"));
+      .catch(err => {
+        console.log(err)
+        alert("You must sign in")
+    });
   };
   //
 
