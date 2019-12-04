@@ -13,7 +13,7 @@ export default class TrackingContainer extends Component {
 
   componentDidUpdate() {
     if (this.state.user !== this.props.user) {
-      fetch(`http://localhost:3000/trackings/${this.props.user.id}`)
+      fetch(`https://pack-tracker-api.herokuapp.com/trackings/${this.props.user.id}`)
         .then(resp => resp.json())
         .then(data =>
           this.setState({ trackings: data, user: this.props.user })

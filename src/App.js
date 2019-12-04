@@ -17,7 +17,7 @@ class App extends Component {
   // hello 
   componentDidMount() {
     if (localStorage.token) {
-      fetch(REACT_API_BASE+`users/${localStorage.token}`)
+      fetch(`https://pack-tracker-api.herokuapp.com/users/${localStorage.token}`)
         .then(resp => resp.json())
         .then(data =>
           this.setState({

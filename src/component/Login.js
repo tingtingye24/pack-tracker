@@ -17,7 +17,7 @@ export default class Login extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    fetch( REACT_API_BASE + "users/login", {
+    fetch("https://pack-tracker-api.herokuapp.com/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

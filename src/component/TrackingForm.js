@@ -10,7 +10,7 @@ export default class TrackingForm extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/carriers")
+    fetch("https://pack-tracker-api.herokuapp.com/carriers")
       .then(resp => resp.json())
       .then(data => {
         this.setState({
@@ -27,7 +27,7 @@ export default class TrackingForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch("http://localhost:3000/trackings", {
+    fetch("https://pack-tracker-api.herokuapp.com/trackings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

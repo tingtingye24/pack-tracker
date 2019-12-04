@@ -4,7 +4,7 @@ import MoreInfoLayover from "../container/MoreInfoLayover";
 
 export default class TrackingCard extends Component {
   handleClick = id => {
-    fetch(`http://localhost:3000/trackings/${id}`, {
+    fetch(`https://pack-tracker-api.herokuapp.com/trackings/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
