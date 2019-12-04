@@ -16,7 +16,8 @@ export default class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch("http://localhost:3000/users/login", {
+    console.log(REACT_APP_API_BASE)
+    fetch(REACT_APP_API_BASE+ 'login', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
