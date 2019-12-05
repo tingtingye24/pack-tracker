@@ -70,7 +70,7 @@ export default class Signup extends Component {
               />
             </Form.Group>
             <Button style={{ margin: "10px" }} variant="primary" type="submit">
-              Login
+              Sign Up
             </Button>
           </Form>
         </Card>
