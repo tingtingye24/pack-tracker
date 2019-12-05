@@ -16,7 +16,7 @@ export default class Signup extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch("http://localhost:3000/users/signup", {
+    fetch("https://pack-tracker-api.herokuapp.com/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
