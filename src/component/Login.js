@@ -28,7 +28,6 @@ export default class Login extends Component {
       .then(resp => resp.json())
       .then(data => {
         if (data.id) {
-          console.log(data);
           localStorage.token = data.id;
           this.props.setUser(data);
         }else{

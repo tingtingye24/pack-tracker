@@ -41,8 +41,6 @@ export default class Signup extends Component {
   }
 
   render() {
-    console.log(this.state.username);
-    console.log(this.state.password_digest);
     return (
       <div>
         <Card className="account">
