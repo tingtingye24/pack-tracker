@@ -16,7 +16,7 @@ export default class Signup extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch("https://pack-tracker-api.herokuapp.com/users/signup", {
+    fetch("http://localhost:3000/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export default class Signup extends Component {
           this.props.setUser(data);
         }
       })
-      .catch(error => alert("Invalid Login.  Please try Again!"));
+      .catch(error => alert(error));
   };
 
   renderErrors(){

@@ -17,7 +17,7 @@ export default class Login extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    fetch("https://pack-tracker-api.herokuapp.com/users/login", {
+    fetch("http://localhost:3000/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,8 +27,13 @@ export default class Login extends Component {
     })
       .then(resp => resp.json())
       .then(data => {
-        localStorage.token = data.id;
-        this.props.setUser(data);
+        if (data.id) {
+          console.log(data);
+          localStorage.token = data.id;
+          this.props.setUser(data);
+        }else{
+          alert("Invalid Login.  Please try Again!")
+        }
       })
       .catch(error => alert("Invalid Login.  Please try Again!"));
   };
